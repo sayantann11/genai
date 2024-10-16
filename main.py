@@ -7,7 +7,7 @@ genai.configure(api_key='AIzaSyD87R8KSnF5uzCnudTbWgg7_mWFQnOUbzM')
 model = genai.GenerativeModel('models/gemini-1.5-flash')
 
 # Your Telegram bot API token
-API_TOKEN = '7675399769:AAE16-yEa2y1F5sE6OweYDcHU6X84Dl2qGw'
+API_TOKEN = '8018890768:AAHEqrRwVse8lPS-nx2-S4KeS8Gv4PLChlA'
 
 # Define command handlers
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
