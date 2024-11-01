@@ -19,7 +19,7 @@ def handle_response(prompt: str) -> str:
     # Implement your custom logic for handling responses here
     if prompt.lower() in ("hi", "hello", "hey"):
         response = "How can I help you today? 😊"
-    if prompt.lower() in ("activity"):
+    elif prompt.lower() in ("activity"):
         response = (
             "Here are some upcoming activities:\n\n"
             "Etätapahtuma: Opastajille: iPhone ja Android -puhelinten erot\n"
