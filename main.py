@@ -19,6 +19,30 @@ def handle_response(prompt: str) -> str:
     # Implement your custom logic for handling responses here
     if prompt.lower() in ("hi", "hello", "hey"):
         response = "How can I help you today? 😊"
+    if prompt.lower() in ("Activity"):
+        response = (
+            "Here are some upcoming activities:\n\n"
+            "Etätapahtuma: Opastajille: iPhone ja Android -puhelinten erot\n"
+            "Milloin: Pe, 8.11.2024 klo 11-15\n"
+            "Missä: etänä Zoomissa\n"
+            "Lisää tietoa: https://www.entersenior.fi/tapahtumat/iphone-ja-android-puhelinten-erot/\n\n"
+            "Lähitapahtuma: Tekoäly\n"
+            "Milloin: Ti, 12.11.2024 klo 13-14\n"
+            "Missä: Porvoon pääkirjasto 2 krs. ryhmätila\n"
+            "Lisää tietoa: https://www.entersenior.fi/tapahtumat/tekoaly-porvoo/\n\n"
+            "Etätapahtuma: Jäsenille: Digivartti, aiheena Google Kääntäjä\n"
+            "Milloin: Ke, 13.11.2024 klo 10-10.30\n"
+            "Missä: etänä Zoomissa\n"
+            "Lisää tietoa: https://www.entersenior.fi/tapahtumat/jasenille-digivartti-aiheena-google/\n\n"
+            "Etätapahtuma: Jäsenille: Kysy mitä vaan digistä!\n"
+            "Milloin: Ma, 25.11.2024 klo 13.30-15.30\n"
+            "Missä: etänä Zoomissa\n"
+            "Lisää tietoa: https://www.entersenior.fi/tapahtumat/jasenille-kmv-1124/\n\n"
+            "Lähitapahtuma: Jäsenille: Joulupuuro\n"
+            "Milloin: Pe, 29.11.2024 klo 11.30-14.30\n"
+            "Missä: Tekniskan salit, Eerikinkatu 2, 00100 Helsinki\n"
+            "Lisää tietoa: https://www.entersenior.fi/tapahtumat/jasenille-joulupuuro/"
+        )
     else:
         # Generate response using Google Generative AI
         try:
@@ -41,6 +65,14 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print('BOT:', response)
     
     await update.message.reply_text(response)
+
+    # Check if it's the user's second message
+    if context.user_data.get('message_count', 0) == 1:
+        await update.message.reply_text("By the way, would you like to know about any nearby activities happening? Just reply with keyword 'Activity'.")
+    
+    # Increment the message count
+    context.user_data['message_count'] = context.user_data.get('message_count', 0) + 1
+
 
 # Main function to start the bot
 def main():
