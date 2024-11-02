@@ -30,33 +30,33 @@ def handle_response(prompt: str) -> str:
         responses.append("Thank you for chatting! If you need anything else, feel free to start a new conversation. Have a great day! 🌟")
 
     elif processed == "activity":
-        responses.append(
-            "📅 **Here are some upcoming activities:**\n\n"
+       responses.append(
+            "📅 Here are some upcoming activities:\n\n"
             
-            "1. **Etätapahtuma: Opastajille: iPhone ja Android -puhelinten erot**\n"
-            "   - **When:** Pe, 8.11.2024 klo 11-15\n"
-            "   - **Where:** Online (Zoom)\n"
-            "   - **More info:** [Click here](https://www.entersenior.fi/tapahtumat/iphone-ja-android-puhelinten-erot/)\n\n"
+            "1. Etätapahtuma: Opastajille: iPhone ja Android -puhelinten erot\n"
+            "   - When: Pe, 8.11.2024 klo 11-15\n"
+            "   - Where: Online (Zoom)\n"
+            "   - More info: [Click here](https://www.entersenior.fi/tapahtumat/iphone-ja-android-puhelinten-erot/)\n\n"
             
-            "2. **Lähitapahtuma: Tekoäly**\n"
-            "   - **When:** Ti, 12.11.2024 klo 13-14\n"
-            "   - **Where:** Porvoon pääkirjasto, 2. krs, ryhmätila\n"
-            "   - **More info:** [Click here](https://www.entersenior.fi/tapahtumat/tekoaly-porvoo/)\n\n"
+            "2. Lähitapahtuma: Tekoäly\n"
+            "   - When: Ti, 12.11.2024 klo 13-14\n"
+            "   - Where: Porvoon pääkirjasto, 2. krs, ryhmätila\n"
+            "   - More info: [Click here](https://www.entersenior.fi/tapahtumat/tekoaly-porvoo/)\n\n"
             
-            "3. **Etätapahtuma: Jäsenille: Digivartti, aiheena Google Kääntäjä**\n"
-            "   - **When:** Ke, 13.11.2024 klo 10-10.30\n"
-            "   - **Where:** Online (Zoom)\n"
-            "   - **More info:** [Click here](https://www.entersenior.fi/tapahtumat/jasenille-digivartti-aiheena-google/)\n\n"
+            "3. Etätapahtuma: Jäsenille: Digivartti, aiheena Google Kääntäjä\n"
+            "   - When: Ke, 13.11.2024 klo 10-10.30\n"
+            "   - Where: Online (Zoom)\n"
+            "   - More info: [Click here](https://www.entersenior.fi/tapahtumat/jasenille-digivartti-aiheena-google/)\n\n"
             
-            "4. **Etätapahtuma: Jäsenille: Kysy mitä vaan digistä!**\n"
-            "   - **When:** Ma, 25.11.2024 klo 13.30-15.30\n"
-            "   - **Where:** Online (Zoom)\n"
-            "   - **More info:** [Click here](https://www.entersenior.fi/tapahtumat/jasenille-kmv-1124/)\n\n"
+            "4. Etätapahtuma: Jäsenille: Kysy mitä vaan digistä!\n"
+            "   - When: Ma, 25.11.2024 klo 13.30-15.30\n"
+            "   - Where: Online (Zoom)\n"
+            "   - More info: [Click here](https://www.entersenior.fi/tapahtumat/jasenille-kmv-1124/)\n\n"
             
-            "5. **Lähitapahtuma: Jäsenille: Joulupuuro**\n"
-            "   - **When:** Pe, 29.11.2024 klo 11.30-14.30\n"
-            "   - **Where:** Tekniskan salit, Eerikinkatu 2, 00100 Helsinki\n"
-            "   - **More info:** [Click here](https://www.entersenior.fi/tapahtumat/jasenille-joulupuuro/)\n"
+            "5. Lähitapahtuma: Jäsenille: Joulupuuro\n"
+            "   - When: Pe, 29.11.2024 klo 11.30-14.30\n"
+            "   - Where: Tekniskan salit, Eerikinkatu 2, 00100 Helsinki\n"
+            "   - More info: [Click here](https://www.entersenior.fi/tapahtumat/jasenille-joulupuuro/)\n"
         )
     else:
         # Generate response using Google Generative AI
