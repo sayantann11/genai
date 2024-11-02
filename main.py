@@ -12,9 +12,9 @@ API_TOKEN = '8018890768:AAHEqrRwVse8lPS-nx2-S4KeS8Gv4PLChlA'
 # Define command handlers
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text('Hi there!👋 I am your AI companion. What are you interested in?')
-    await update.message.reply_text("How can I help you today? 😊")
     await update.message.reply_text("By the way, would you like to know about any nearby activities happening?")
     await update.message.reply_text("Just reply with the keyword 'Activity' at any time in the chat.")
+    await update.message.reply_text("Reply with End to finish the Chat")
 
 # Define message handler
 def handle_response(prompt: str) -> str:
